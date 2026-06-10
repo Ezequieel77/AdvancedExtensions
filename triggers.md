@@ -1,17 +1,15 @@
-# Lista de Triggers
+# Trigger List
 
-
-| Trigger | Descripción |
+| Trigger | Description |
 |----------|-------------|
-| `WORLD_CHANGE` | Se ejecuta al cambiar de mundo. |
-| `TOTEM_USE` | Se ejecuta al usar un tótem. |
-| `ATTACK_ALL` | Se ejecuta al golpear a melee a cualquier entidad. |
-| `DEFENSE_ALL` | Se ejecuta al recibir daño a `melee` de cualquier entidad. |
-| `DEFENSE_PROJECTILE_ALL` | Se ejecuta al ser impactado por un proyectil proveniente de cualquier entidad. |
-| `SHOOT_ALL` | Se ejecuta cuando una flecha impacta sobre cualquier entidad. |
-| `OUT_OF_COMBAT` | Se ejecuta al salir de combate. El tiempo necesario para abandonar el combate se define en `config.yml`. Altamente recomendable hacerlo coincidir con el plugin de combate que esté utilizando. |
-| `ENTER_COMBAT` | Se ejecuta al entrar en combate (primer golpe realizado o recibido tras estar fuera de combate). |
+| `WORLD_CHANGE` | Executes when changing worlds. |
+| `TOTEM_USE` | Executes when using a totem. |
+| `ATTACK_ALL` | Executes when hitting any entity in melee. |
+| `DEFENSE_ALL` | Executes when taking melee damage from any entity. |
+| `DEFENSE_PROJECTILE_ALL` | Executes when hit by a projectile from any entity. |
+| `SHOOT_ALL` | Executes when an arrow hits any entity. |
+| `OUT_OF_COMBAT` | Executes upon leaving combat. The time required to leave combat is defined in `config.yml`. Highly recommended to match it with the combat plugin you are using. |
+| `ENTER_COMBAT` | Executes upon entering combat (first hit dealt or received after being out of combat). |
 
-
-|Lista detallada de efectos y su funcionamiento [➡️ Effects](effects.md)|
-|----------------------------------------------------------------------------|
+| Detailed list of effects and how they work [➡️ Effects](effects.md) |
+|----------------------------------------------------------------------|

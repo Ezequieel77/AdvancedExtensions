@@ -5,6 +5,7 @@ AdvancedExtensions es una extensión del plugin AdvancedEnchantments que agrega 
 Para comprender esta documentación, es necesario entender el funcionamiento de AdvancedEnchantments.
 
 Sitios oficiales de AdvancedEnchantments:
+
   https://wiki.advancedplugins.net/abilities/introduction
   https://advancedplugins.net/item/AdvancedEnchantments.1
 
@@ -46,7 +47,7 @@ Operaciones matemáticas dentro de efectos (<math>).
 
 Aunque el ejemplo representa un sistema de ira, la misma lógica puede utilizarse para crear mecánicas de energía, maná, acumulaciones, cargas, combos, corrupción, adrenalina o cualquier otro recurso personalizado.
 
-ragetest:
+```ragetest:
   display: "%group-color%Acumulación de Ira"   
   description: |- 
     Aumenta el daño en 5% por
@@ -76,6 +77,7 @@ ragetest:
         - "UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~REPEATING"
         - "UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~ATTACK"
         - "UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~DEFENSE"
+```
 
 # Explicación línea por línea
 

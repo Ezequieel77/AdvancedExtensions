@@ -12,5 +12,5 @@
 | `P_INCREMENT_VAR:name:value` | Incrementa o decrementa (si el valor es negativo) una variable personal del jugador. |
 
 
-|Lista detallada de placeholders [➡️ Triggers](triggers.md)|
+|Lista detallada de placeholders [➡️ Placeholders](placeholders.md)|
 |----------------------------------------------------------------------------|

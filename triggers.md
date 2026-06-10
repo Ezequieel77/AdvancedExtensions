@@ -11,3 +11,7 @@
 | `SHOOT_ALL` | Se ejecuta cuando una flecha impacta sobre cualquier entidad. |
 | `OUT_OF_COMBAT` | Se ejecuta al salir de combate. El tiempo necesario para abandonar el combate se define en `config.yml`. Altamente recomendable hacerlo coincidir con el plugin de combate que esté utilizando. |
 | `ENTER_COMBAT` | Se ejecuta al entrar en combate (primer golpe realizado o recibido tras estar fuera de combate). |
+
+
+|Lista detallada de efectos y su funcionamiento [➡️ Effects](effects.md)|
+|----------------------------------------------------------------------------|

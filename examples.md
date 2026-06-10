@@ -1,4 +1,4 @@
-¿Dónde debo crear los encantamientos?
+# ¿Dónde debo crear los encantamientos?
 
 Una vez el plugin sea instalado en su servidor, lo único que tiene que hacer es ir al archivo AdvancedEnchantments/enchantments.yml y empezar a configurar como normalmente lo hace.
 

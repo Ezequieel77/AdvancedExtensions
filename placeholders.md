@@ -1,16 +1,14 @@
-# Lista de Placeholders
-
-| Placeholder | Descripción |
+# Placeholder List
+| Placeholder | Description |
 |-------------|-------------|
-| `%distance_damage%` | Devuelve la distancia entre `Victim` y `Attacker`. |
-| `%ae_enemies_10%` | Devuelve la cantidad de jugadores hostiles (`isDamageable`) en un radio de 10 bloques. |
-| `%ae_attribute_attribute%` | Devuelve el valor de un atributo específico de `Victim` o `Attacker`. |
-| `%ae_in_combat%` | Devuelve `true` si el jugador está en combate PvP; de lo contrario, `false`. |
-| `%ae_has_mark_name%` | Devuelve `true` si el activador del trigger posee la marca especificada. |
-| `%ae_vmark_name%` | Devuelve `true` si `Victim` posee la marca especificada. |
-| `%ae_amark_name%` | Devuelve `true` si `Attacker` posee la marca especificada. |
-| `%p_var_name%` | Devuelve el valor de una variable personal del jugador que porta el encantamiento. |
+| `%distance_damage%` | Returns the distance between `Victim` and `Attacker`. |
+| `%ae_enemies_10%` | Returns the number of hostile players (`isDamageable`) within a radius of 10 blocks. |
+| `%ae_attribute_attribute%` | Returns the value of a specific attribute of `Victim` or `Attacker`. |
+| `%ae_in_combat%` | Returns `true` if the player is in PvP combat; otherwise, `false`. |
+| `%ae_has_mark_name%` | Returns `true` if the trigger activator has the specified mark. |
+| `%ae_vmark_name%` | Returns `true` if `Victim` has the specified mark. |
+| `%ae_amark_name%` | Returns `true` if `Attacker` has the specified mark. |
+| `%p_var_name%` | Returns the value of a personal variable for the enchantment holder. |
 
-
-|¿Cómo implemento estas funciones? [➡️ Explicación](examples.md)|
-|----------------------------------------------------------------------------|
+| How do I implement these features? [➡️ Examples](examples.md) |
+|---------------------------------------------------------------|

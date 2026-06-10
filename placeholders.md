@@ -10,3 +10,7 @@
 | `%ae_vmark_name%` | Devuelve `true` si `Victim` posee la marca especificada. |
 | `%ae_amark_name%` | Devuelve `true` si `Attacker` posee la marca especificada. |
 | `%p_var_name%` | Devuelve el valor de una variable personal del jugador que porta el encantamiento. |
+
+
+|¿Cómo implemento estas funciones? [➡️ Explicación](examples.md)|
+|----------------------------------------------------------------------------|

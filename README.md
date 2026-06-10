@@ -5,9 +5,8 @@ AdvancedExtensions es una extensión del plugin AdvancedEnchantments que agrega 
 Para comprender esta documentación, es necesario entender el funcionamiento de AdvancedEnchantments.
 
 Sitios oficiales de AdvancedEnchantments:
-
-  https://wiki.advancedplugins.net/abilities/introduction
-  https://advancedplugins.net/item/AdvancedEnchantments.1
+ * https://wiki.advancedplugins.net/abilities/introduction
+ * https://advancedplugins.net/item/AdvancedEnchantments.1
 
 
 # Características principales

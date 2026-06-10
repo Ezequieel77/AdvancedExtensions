@@ -128,8 +128,7 @@ Aunque el ejemplo representa un sistema de ira, la misma lógica puede utilizars
 
   Cumple la misma función que la línea anterior, pero cuando el jugador recibe daño.
 
-|------------------------------------------------------------------------------|
-|[➡️ Triggers](triggers.md) |  Lista detallada de triggers y su funcionamiento |
+|[➡️ Triggers](triggers.md)   Lista detallada de triggers y su funcionamiento |
 |------------------------------------------------------------------------------|
 
 

@@ -130,8 +130,8 @@ Aunque el ejemplo representa un sistema de ira, la misma lógica puede utilizars
 
 
 
-|[➡️ Triggers](triggers.md)     Lista detallada de triggers y su funcionamiento |
-|------------------------------------------------------------------------------|
+|Lista detallada de triggers y su funcionamiento [➡️ Triggers](triggers.md)|
+|----------------------------------------------------------------------------|
 
 
 

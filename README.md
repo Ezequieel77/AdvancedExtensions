@@ -1,137 +1,136 @@
 # AdvancedExtensions
 
-AdvancedExtensions es una extensión del plugin AdvancedEnchantments que agrega nuevos efectos, desencadenantes y placeholders, con el objetivo de ampliar las posibilidades que ofrece.
+AdvancedExtensions is an extension of the AdvancedEnchantments plugin that adds new effects, triggers and placeholders, with the goal of expanding the possibilities it offers.
 
-Para comprender esta documentación, es necesario entender el funcionamiento de AdvancedEnchantments.
+To understand this documentation, you need to understand how AdvancedEnchantments works.
 
-Sitios oficiales de AdvancedEnchantments:
- * https://wiki.advancedplugins.net/abilities/introduction
- * https://advancedplugins.net/item/AdvancedEnchantments.1
+Official AdvancedEnchantments sites:
+* https://wiki.advancedplugins.net/abilities/introduction
+* https://advancedplugins.net/item/AdvancedEnchantments.1
 
+# Main features
 
-# Características principales
+- New triggers.
+- New placeholders.
+- New effects.
 
-- Nuevos triggers.
-- Nuevos placeholders.
-- Nuevos effects.
+# And that makes possible:
 
-# Y eso hace posible:
+- Player combat detection.
+- Temporary mark system.
+- Per-player custom variables.
+- Permanent attributes.
+- Dynamic bossbars.
+- Advanced teleportation.
 
-- Detección de combate entre jugadores.
-- Sistema de marcas temporales.
-- Variables personalizadas por jugador.
-- Atributos permanentes.
-- Bossbars dinámicas.
-- Teletransportes avanzados.
+# Example:
 
+Rage Simulation
 
-# Ejemplo:
+This enchantment uses a personal variable (rage) to store accumulated rage points.
 
-Simulación de Ira
+Every time the holder takes damage, the variable increases by 1 point. When attacking, the damage dealt increases by 5% per stored rage point. After landing the hit, 5 rage points are consumed.
 
-Este encantamiento utiliza una variable personal (rage) para almacenar puntos de ira acumulados.
+While the player remains in combat, rage will keep accumulating and being consumed dynamically. Upon leaving combat, the variable resets to 0 automatically.
 
-Cada vez que el portador recibe daño, la variable aumenta en 1 punto. Al atacar, el daño infligido aumenta un 5% por cada punto de ira almacenado. Después de ejecutar el golpe, se consumen 5 puntos de ira.
+The current rage state is displayed through a bossbar that updates in real time using the placeholder %p_var_rage%.
 
-Mientras el jugador permanezca en combate, la ira seguirá acumulándose y consumiéndose dinámicamente. Al salir de combate, la variable se reinicia a 0 automáticamente.
+- Personal variables (P_VARIABLE).
+- Incremental variables (P_INCREMENT_VAR).
+- Custom placeholders (%p_var_name%).
+- Dynamic bossbars (BOSSBAR and UPDATE_BOSSBAR).
+- Custom triggers (OUT_OF_COMBAT).
+- Math operations inside effects (\<math>).
 
-El estado actual de la ira se muestra mediante una bossbar que se actualiza en tiempo real utilizando el placeholder %p_var_rage%.
+Although the example represents a rage system, the same logic can be used to create energy, mana, stacks, charges, combos, corruption, adrenaline or any other custom resource mechanic.
 
-Variables personales (P_VARIABLE).
-Variables incrementales (P_INCREMENT_VAR).
-Placeholders personalizados (%p_var_name%).
-Bossbars dinámicas (BOSSBAR y UPDATE_BOSSBAR).
-Triggers personalizados (OUT_OF_COMBAT).
-Operaciones matemáticas dentro de efectos (<math>).
-
-Aunque el ejemplo representa un sistema de ira, la misma lógica puede utilizarse para crear mecánicas de energía, maná, acumulaciones, cargas, combos, corrupción, adrenalina o cualquier otro recurso personalizado.
-
-```ragetest:
-  display: "%group-color%Acumulación de Ira"   
-  description: |- 
-    Aumenta el daño en 5% por
-    cada punto de ira acumulado.
-    Pierdes 5 puntos de ira por golpe
-    infligido.
-    Pierdes toda tu ira al salir de 
-    combate.
-  applies-to: Casco 
+```yaml
+ragetest:
+  display: "%group-color%Rage Accumulation"
+  description: |-
+    Increases damage by 5% per
+    accumulated rage point.
+    Lose 5 rage points per
+    attack landed.
+    Lose all rage upon leaving
+    combat.
+  applies-to: Helmet
   type: ATTACK;EFFECT_STATIC;DEFENSE;REPEATING;OUT_OF_COMBAT
-  group: ESPECIAL
+  group: SPECIAL
   applies:
     - ALL_HELMET
   levels:
     "1":
       time: 2
       effects:
-        - "BOSSBAR:rage:red:solid:Ira: 0 ~EFFECT_STATIC"
+        - "BOSSBAR:rage:red:solid:Rage: 0 ~EFFECT_STATIC"
         - "P_VARIABLE:rage:0 ~EFFECT_STATIC"
         - "P_INCREMENT_VAR:rage:1 ~DEFENSE"
         - "INCREASE_DAMAGE:<math>%p_var_rage% * 5</math> ~ATTACK"
         - "P_INCREMENT_VAR:rage:-5 ~ATTACK"
         - "P_VARIABLE:rage:0 ~ATTACK <condition>%p_var_rage% < 0 : %allow%</condition>"
         - "P_VARIABLE:rage:0 ~OUT_OF_COMBAT"
-        - "UPDATE_BOSSBAR:rage:Ira: 0 ~OUT_OF_COMBAT"
-        - "MESSAGE:Saliste de combate. ~OUT_OF_COMBAT"
-        - "UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~REPEATING"
-        - "UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~ATTACK"
-        - "UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~DEFENSE"
+        - "UPDATE_BOSSBAR:rage:Rage: 0 ~OUT_OF_COMBAT"
+        - "MESSAGE:You left combat. ~OUT_OF_COMBAT"
+        - "UPDATE_BOSSBAR:rage:Rage: %p_var_rage% ~REPEATING"
+        - "UPDATE_BOSSBAR:rage:Rage: %p_var_rage% ~ATTACK"
+        - "UPDATE_BOSSBAR:rage:Rage: %p_var_rage% ~DEFENSE"
 ```
 
-# Explicación línea por línea
+# Line by line explanation
 
-* ```"BOSSBAR:rage:red:solid:Ira: 0 ~EFFECT_STATIC"```
+* `"BOSSBAR:rage:red:solid:Rage: 0 ~EFFECT_STATIC"`
 
-  Crea una bossbar exclusiva para el jugador con el texto inicial "Ira: 0". Al ejecutarse mediante EFFECT_STATIC, permanecerá activa hasta que la pieza con el encantamiento sea desequipada.
+  Creates a player-exclusive bossbar with the initial text "Rage: 0". Since it runs via EFFECT_STATIC, it will remain active until the enchanted piece is unequipped.
 
-* ```"P_VARIABLE:rage:0 ~EFFECT_STATIC"```
+* `"P_VARIABLE:rage:0 ~EFFECT_STATIC"`
 
-  Crea una variable personal llamada "rage" con valor inicial 0. Al igual que la bossbar, existirá mientras el jugador mantenga equipada la pieza con el encantamiento.
+  Creates a personal variable named "rage" with an initial value of 0. Like the bossbar, it will exist as long as the player keeps the enchanted piece equipped.
 
-* ```"P_INCREMENT_VAR:rage:1 ~DEFENSE"```
+* `"P_INCREMENT_VAR:rage:1 ~DEFENSE"`
 
-  Cada vez que se active el trigger DEFENSE, incrementa en 1 el valor de la variable "rage".
+  Every time the DEFENSE trigger activates, increments the "rage" variable by 1.
 
-* ```"INCREASE_DAMAGE:<math>%p_var_rage% * 5</math> ~ATTACK"```
+* `"INCREASE_DAMAGE:<math>%p_var_rage% * 5</math> ~ATTACK"`
 
-  Al activarse ATTACK, aumenta el daño infligido en función del valor actual de "rage" multiplicado por 5. Por ejemplo, si "rage" vale 5, el daño aumentará un 25%.
+  When ATTACK triggers, increases damage dealt based on the current value of "rage" multiplied by 5. For example, if "rage" is 5, damage will increase by 25%.
 
-* ```"P_INCREMENT_VAR:rage:-5 ~ATTACK"```
+* `"P_INCREMENT_VAR:rage:-5 ~ATTACK"`
 
-  Después de aplicar el daño potenciado, consume 5 puntos de ira.
+  After applying the boosted damage, consumes 5 rage points.
 
-* ```"P_VARIABLE:rage:0 ~ATTACK <condition>%p_var_rage% < 0 : %allow%</condition>"```
+* `"P_VARIABLE:rage:0 ~ATTACK <condition>%p_var_rage% < 0 : %allow%</condition>"`
 
-  Si la reducción anterior provoca que la variable quede por debajo de 0, su valor se corrige automáticamente a 0.
+  If the previous reduction causes the variable to drop below 0, its value is automatically corrected to 0.
 
-* ```"P_VARIABLE:rage:0 ~OUT_OF_COMBAT"```
+* `"P_VARIABLE:rage:0 ~OUT_OF_COMBAT"`
 
-  Reinicia la variable al activarse OUT_OF_COMBAT, eliminando toda la ira acumulada.
+  Resets the variable when OUT_OF_COMBAT triggers, clearing all accumulated rage.
 
-* ```"UPDATE_BOSSBAR:rage:Ira: 0 ~OUT_OF_COMBAT"```
+* `"UPDATE_BOSSBAR:rage:Rage: 0 ~OUT_OF_COMBAT"`
 
-  Actualiza inmediatamente la bossbar al abandonar el combate para reflejar el reinicio de la variable.
+  Immediately updates the bossbar upon leaving combat to reflect the variable reset.
 
-* ```"MESSAGE:Saliste de combate. ~OUT_OF_COMBAT"```
+* `"MESSAGE:You left combat. ~OUT_OF_COMBAT"`
 
-  Envía una notificación al jugador cuando abandona el combate. Esta línea es opcional y se utiliza únicamente como referencia visual para el ejemplo.
+  Sends a notification to the player when they leave combat. This line is optional and used only as a visual reference for the example.
 
-* ```"UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~REPEATING"```
+* `"UPDATE_BOSSBAR:rage:Rage: %p_var_rage% ~REPEATING"`
 
-  Actualiza periódicamente el texto de la bossbar utilizando el valor actual de la variable. La frecuencia de actualización se define mediante la opción "time". En este ejemplo, cada 2 segundos.
+  Periodically updates the bossbar text using the current variable value. The update frequency is defined by the "time" option. In this example, every 2 seconds.
 
-* ```"UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~ATTACK"```
+* `"UPDATE_BOSSBAR:rage:Rage: %p_var_rage% ~ATTACK"`
 
-  Fuerza una actualización inmediata tras atacar para evitar que la bossbar espere al siguiente ciclo de REPEATING.
+  Forces an immediate update after attacking to prevent the bossbar from waiting for the next REPEATING cycle.
 
-* ```"UPDATE_BOSSBAR:rage:Ira: %p_var_rage% ~DEFENSE"```
+* `"UPDATE_BOSSBAR:rage:Rage: %p_var_rage% ~DEFENSE"`
 
-  Cumple la misma función que la línea anterior, pero cuando el jugador recibe daño.
+  Serves the same purpose as the previous line, but when the player takes damage.
 
+---
 
-
-|Lista detallada de triggers y su funcionamiento [➡️ Triggers](triggers.md)|
-|----------------------------------------------------------------------------|
+| Detailed list of triggers and how they work [➡️ Triggers](triggers.md) |
+|------------------------------------------------------------------------|
 
 
 

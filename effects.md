@@ -10,3 +10,7 @@
 | `MARK:name:ticks` | Aplica una marca temporal a `Victim` o `Attacker`. |
 | `P_VARIABLE:name:value` | Crea o modifica una variable personal del jugador que porta el encantamiento. |
 | `P_INCREMENT_VAR:name:value` | Incrementa o decrementa (si el valor es negativo) una variable personal del jugador. |
+
+
+|Lista detallada de placeholders [➡️ Triggers](triggers.md)|
+|----------------------------------------------------------------------------|

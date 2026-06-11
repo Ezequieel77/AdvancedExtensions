@@ -1,6 +1,6 @@
 | Effect                              | Description                                                                                                    |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `EXECUTE_EFFECTS:group_name`        | Executes a predefined group of effects from `effect-groups`. Allows reusable and modular effect logic.         |
+| `EXECUTE_EFFECTS:group_name`        | Executes a predefined group of effects from `effect-groups` in `effects.yml`. Allows reusable and modular effect logic.         |
 | `ADD_ATTRIBUTE:attribute:value`     | Adds an attribute to the player. Only works with `EFFECT_STATIC`.                                              |
 | `ADD_DAMAGE:value`                  | Adds extra damage to the original damage dealt by the attacker.                                                |
 | `BOSSBAR:id:color:style:ticks:text` | Creates a bossbar for the player. `ticks` is optional; if omitted, it will remain active indefinitely.         |

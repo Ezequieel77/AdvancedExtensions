@@ -13,5 +13,14 @@
 | `P_VARIABLE:name:value` | Creates or modifies a personal variable for the enchantment holder. |
 | `P_INCREMENT_VAR:name:value` | Increments or decrements (if value is negative) a personal variable for the enchantment holder. |
 
+
+## MythicMobs Effects
+
+| Effect                       | Description                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `MM_SKILL:skillname[:power]` | Executes a MythicMobs skill using the attacker as the caster. `power` is optional and defaults to `1.0`. |
+| `MM_SPAWN:mobname[:level]`   | Spawns a MythicMob at the target's location. `level` is optional and defaults to `1`.                    |
+
+
 | Detailed list of placeholders [➡️ Placeholders](placeholders.md) |
 |-------------------------------------------------------------------|

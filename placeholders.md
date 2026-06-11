@@ -1,4 +1,5 @@
 # Placeholder List
+
 | Placeholder | Description |
 |-------------|-------------|
 | `%distance_damage%` | Returns the distance between `Victim` and `Attacker`. |
@@ -9,6 +10,8 @@
 | `%ae_vmark_name%` | Returns `true` if `Victim` has the specified mark. |
 | `%ae_amark_name%` | Returns `true` if `Attacker` has the specified mark. |
 | `%p_var_name%` | Returns the value of a personal variable for the enchantment holder. |
+| `%is_mythicmob%` | Returns `true` if the target entity is a MythicMob; otherwise, `false`. |
+| `%mm_mob_name%` | Returns the internal MythicMob name of the target entity. Returns an empty string if the entity is not a MythicMob. |
 
 | How do I implement these features? [➡️ Examples](examples.md) |
 |---------------------------------------------------------------|

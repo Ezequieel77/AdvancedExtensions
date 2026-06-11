@@ -18,7 +18,7 @@
 
 | Effect                       | Description                                                                                              |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `MM_SKILL:skillname:power` | Executes a MythicMobs skill using the attacker as the caster. `power` is optional and defaults to `1.0`. |
+| `MM_SKILL:skillname:power` | Executes a MythicMobs skill using the attacker as the caster. power is optional and defaults to 1.0. The target is determined by the selector defined inside the MythicMobs skill itself. If no selector is defined in the skill, the target will be the entity resolved by AE (@Victim, @Attacker, etc.). |
 | `MM_SPAWN:mobname:level`   | Spawns a MythicMob at the target's location. `level` is optional and defaults to `1`.                    |
 
 

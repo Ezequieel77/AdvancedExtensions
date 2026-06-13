@@ -9,7 +9,6 @@
 | `%ae_has_mark_name%` | Returns `true` if the trigger activator has the specified mark. |
 | `%ae_vmark_name%` | Returns `true` if `Victim` has the specified mark. |
 | `%ae_amark_name%` | Returns `true` if `Attacker` has the specified mark. |
-| Placeholder | Description |
 | `%ae_cooldown_<enchant>%` | Returns the remaining cooldown of the specified enchantment. Replace `<enchant>` with the enchantment's internal name. |
 | `%p_var_name%` | Returns the value of a personal variable for the enchantment holder. |
 | `%is_mythicmob%` | Returns `true` if the target entity is a MythicMob; otherwise, `false`. |

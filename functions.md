@@ -1,3 +1,9 @@
+## Functions
+
+Functions allow you to modify how an individual effect line behaves.
+
+Functions can be combined together on the same effect line.
+
 ## Cooldown
 
 The `cooldown` function adds an independent cooldown to an effect line.

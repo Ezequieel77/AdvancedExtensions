@@ -14,6 +14,7 @@
 | `TELEPORT_PLAYER:victim/attacker`   | Teleports a player towards `Victim` or `Attacker`.                                                             |
 | `TEMP_BLOCK:type:radius:ticks`      | Places temporary blocks at the feet of `Victim` or `Attacker`. Radius must be odd.                             |
 | `UPDATE_BOSSBAR:id:text`            | Updates the text of an existing bossbar.                                                                       |
+| `SET_COOLDOWN:enchant:lineIndex:seconds` | Sets the cooldown of a specific effect line within an enchantment. `lineIndex` refers to the effect's position in the enchantment's effect list. 
 
 
 

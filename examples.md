@@ -56,4 +56,7 @@ corrupt:
 
 In this version, the player accumulates a combat charge every 10 seconds while remaining in PvP. Each charge increases axe damage by 3%, displaying the accumulated value through a bossbar. Upon leaving combat, the accumulation resets automatically.
 
+| Functions [➡️ Functions](functions.md) |
+|---------------------------------------------------------------|
+
 

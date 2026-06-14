@@ -13,7 +13,6 @@
 | `%p_var_name%` | Returns the value of a personal variable for the enchantment holder. |
 | `%is_mythicmob%` | Returns `true` if the target entity is a MythicMob; otherwise, `false`. |
 | `%mm_mob_name%` | Returns the internal MythicMob name of the target entity. Returns an empty string if the entity is not a MythicMob. |
-| `%ae_cooldown_<enchant>%` | Returns the remaining cooldown of the specified enchantment. Replace `<enchant>` with the enchantment's internal name. |
 | `%ae_line_cooldown_<enchant>_line<index>%` | Returns the remaining cooldown of a specific effect line within an enchantment. Replace `<enchant>` with the enchantment's internal name and `<index>` with the effect line index. |
 | `%ae_in_zone_<name>%` | Returns whether the player is currently inside the specified zone. Replace `<name>` with the zone name defined in `CREATE_ZONE`. |
 

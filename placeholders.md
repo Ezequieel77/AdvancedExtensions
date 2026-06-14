@@ -16,5 +16,5 @@
 | `%ae_line_cooldown_<enchant>_line<index>%` | Returns the remaining cooldown of a specific effect line within an enchantment. Replace `<enchant>` with the enchantment's internal name and `<index>` with the effect line index. |
 | `%ae_in_zone_<name>%` | Returns whether the player is currently inside the specified zone. Replace `<name>` with the zone name defined in `CREATE_ZONE`. |
 
-| How do I implement these? [➡️ Examples](examples.md) |
+| How do I implement this? [➡️ Examples](examples.md) |
 |---------------------------------------------------------------|

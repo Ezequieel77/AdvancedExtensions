@@ -4,7 +4,7 @@
 | `ADD_ATTRIBUTE:attribute:value`     | Adds an attribute to the player. Only works with `EFFECT_STATIC`.                                              |
 | `ADD_DAMAGE:value`                  | Adds extra damage to the original damage dealt by the attacker.                                                |
 | `BOSSBAR:id:color:style:ticks:text` | Creates a bossbar for the player. `ticks` is optional; if omitted, it will remain active indefinitely.         |
-| `JAIL:material:xz:height:ticks`     | Creates a roofless jail around the player from their feet up to the defined height. xz must be odd, minimum 5. |
+| `JAIL:material:xz:height:ticks`     | Creates a temporary jail centered on the player's feet. `type` can be `cuboid` or `sphere`. For `cuboid`, builds walls up to `height`, plus a floor and roof by default (set `roofAndFloor` to `false` for walls only); `radius` must be odd, minimum 5. For `sphere`, builds a hollow spherical shell using `radius` and does not accept `height`. |
 | `MARK:name:ticks`                   | Applies a temporary mark to `Victim` or `Attacker`.                                                            |
 | `P_INCREMENT_VAR:name:value`        | Increments or decrements (if value is negative) a personal variable for the enchantment holder.                |
 | `P_VARIABLE:name:value`             | Creates or modifies a personal variable for the enchantment holder.                                            |

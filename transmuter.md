@@ -14,7 +14,7 @@ Use the following command:
 * `chance` *(optional)* — Success chance of the Transmuter.
 * `group` *(optional)* — Enchantment group the Transmuter can be used on.
 
-If `chance` and `group` are omitted, both values are generated randomly according to the configuration in `items.yml`.
+If `chance` and `group` are omitted, both values are generated randomly.
 
 ## Configuration
 

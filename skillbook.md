@@ -82,3 +82,6 @@ This example creates a combat arena by:
 * Displaying a boss bar that updates until the skill ends.
 
 The player can activate the skill again only after the configured cooldown has expired.
+
+| Transmuter [➡️ Transmuter](transmuter.md) |
+|---------------------------------------------------------------|

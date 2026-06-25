@@ -1,4 +1,4 @@
-# Trigger List
+AdvancedEnchantments Trigger List: https://wiki.advancedplugins.net/abilities/triggers
 
 | Trigger | Description |
 |----------|-------------|

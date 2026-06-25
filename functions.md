@@ -1,3 +1,5 @@
+AdvancedEnchantments functions list: https://wiki.advancedplugins.net/abilities/functions
+
 ## Functions
 
 Functions allow you to modify how an individual effect line behaves.

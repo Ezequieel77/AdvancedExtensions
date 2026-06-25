@@ -1,3 +1,6 @@
+AdvancedEnchantments Trigger List: https://wiki.advancedplugins.net/abilities/triggers
+
+
 | Effect                              | Description                                                                                                    |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | `EXECUTE_EFFECTS:group_name`        | Executes a predefined group of effects from `effects.yml`. Allows reusable and modular effect logic.         |

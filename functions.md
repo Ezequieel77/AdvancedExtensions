@@ -124,4 +124,5 @@ The cooldown placeholder must also be updated:
 
 Otherwise, the placeholder will reference the wrong effect line and may display an incorrect cooldown value.
 
-
+| SkillBook [➡️ SkillBook](skillbook.md) |
+|---------------------------------------------------------------|

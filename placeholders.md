@@ -1,4 +1,4 @@
-# Placeholder List
+AdvancedEnchantments placeholders list: https://wiki.advancedplugins.net/abilities/conditions/conditions-variables
 
 | Placeholder | Description |
 |-------------|-------------|

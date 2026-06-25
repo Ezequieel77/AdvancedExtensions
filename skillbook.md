@@ -6,6 +6,14 @@ Any enchantment with the `ACTIVE_SKILL` type will automatically appear in the Sk
 
 To create an active skill, three steps are required:
 
+Obtaining the Skill Book
+
+Use the following command to give a player a Skill Book:
+
+/aex giveitem <player> skillbook [amount]
+
+Once obtained, right-click the Skill Book to open the active skills menu.
+
 ### 1. Configure the skill cooldown
 
 In `config.yml`, register the enchantment and define its cooldown in seconds.

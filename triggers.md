@@ -1,5 +1,6 @@
 AdvancedEnchantments Trigger List: https://wiki.advancedplugins.net/abilities/triggers
 
+
 | Trigger | Description |
 |----------|-------------|
 | `WORLD_CHANGE` | Executes when changing worlds. |

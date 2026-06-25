@@ -1,3 +1,4 @@
+AdvancedEnchantments effect list: https://wiki.advancedplugins.net/abilities/effects
 
 | Effect                              | Description                                                                                                    |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |

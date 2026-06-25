@@ -4,15 +4,16 @@ The Skill Book is a configurable item that allows players to activate enchantmen
 
 Any enchantment with the `ACTIVE_SKILL` type will automatically appear in the Skill Book while it is equipped by the player.
 
-To create an active skill, three steps are required:
-
-Obtaining the Skill Book
+## Obtaining the Skill Book
 
 Use the following command to give a player a Skill Book:
 
+```text
 /aex giveitem <player> skillbook [amount]
+```
 
 Once obtained, right-click the Skill Book to open the active skills menu.
+
 
 ### 1. Configure the skill cooldown
 

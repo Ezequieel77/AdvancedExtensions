@@ -1,5 +1,3 @@
-AdvancedEnchantments Trigger List: https://wiki.advancedplugins.net/abilities/triggers
-
 
 | Effect                              | Description                                                                                                    |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |

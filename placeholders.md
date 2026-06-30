@@ -2,7 +2,7 @@ AdvancedEnchantments placeholders list: https://wiki.advancedplugins.net/abiliti
 
 | Placeholder | Description |
 |-------------|-------------|
-| `%distance_damage%` | Returns the distance between `Victim` and `Attacker`. |
+| `%ae_distance_damage%` | Returns the distance between `Victim` and `Attacker`. |
 | `%ae_enemies_10%` | Returns the number of hostile players (`isDamageable`) within a radius of 10 blocks. |
 | `%ae_attribute_attribute%` | Returns the value of a specific attribute of `Victim` or `Attacker`. |
 | `%ae_in_combat%` | Returns `true` if the player is in PvP combat; otherwise, `false`. |
